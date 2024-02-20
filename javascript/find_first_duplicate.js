@@ -1,5 +1,13 @@
 function findFirstDuplicate(arr) {
   // type your code here
+  let duplicates = new Set()
+  for (let num of arr) {
+    if (duplicates.has(num)) {
+      return num
+    }
+    duplicates.add(num)
+  }
+  return -1
 }
 
 if (require.main === module) {
